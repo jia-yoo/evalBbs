@@ -1,5 +1,7 @@
 package com.green.evalBbs.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,5 +35,10 @@ public class EvalBbsController {
 		dao.insert(evalBbsDto);
 		return "redirect:list";
 	}
-	
+	@GetMapping("/detail")
+	public String detail(HttpServletRequest request, Model model) {
+		int bno = Integer.parseInt(request.getParameter("bno"));
+		model.addAttribute("detail", dao.getDetail(bno));
+		return "detail";
+	}
 }

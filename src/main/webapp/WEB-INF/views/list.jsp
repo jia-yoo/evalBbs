@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<h1>게시물 목록페이지</h1>
 <body>
   <a href="writeForm">글 작성하기</a>
   <table>
@@ -23,7 +24,7 @@
     <c:forEach var="list" items="${list}">
       <tr>
         <td> ${list.bno}</td>
-        <td> ${list.title}</td>
+        <td> <a href="detail?bno=${list.bno}">${list.title}</a></td>
         <td> ${list.content}</td>
         <td> ${list.writer}</td>
         <td> ${list.regdate}</td>

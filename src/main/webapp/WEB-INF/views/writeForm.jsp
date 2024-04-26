@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+  <h1>게시물 작성페이지</h1>
   <form action="" method="post">
     <input type="text" name="title" placeholder="제목">
     <textarea name="content" placeholder="내용"></textarea>

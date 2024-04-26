@@ -11,4 +11,7 @@
 	<insert id="insert">
 		INSERT INTO evalbbs VALUES (0, #{evalBbsDto.title}, #{evalBbsDto.content}, #{evalBbsDto.writer}, #{evalBbsDto.regdate});
 	</insert>
+	<select id="getDetail" resultType="com.green.evalBbs.dto.EvalBbsDto">
+		select * from evalbbs where bno=#{bno}
+	</select>
   </mapper>
