@@ -14,4 +14,7 @@
 	<select id="getDetail" resultType="com.green.evalBbs.dto.EvalBbsDto">
 		select * from evalbbs where bno=#{bno}
 	</select>
+	<update id="delete">
+		DELETE FROM evalbbs WHERE bno=#{bno};
+	</update>
   </mapper>

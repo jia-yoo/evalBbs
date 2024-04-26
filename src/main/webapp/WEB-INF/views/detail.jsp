@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <h1>게시물 상세페이지</h1>
+<a href="delete?bno=${detail.bno}">이 게시글 삭제하기</a>
 <body>
   <table>
     <tr>

@@ -41,4 +41,10 @@ public class EvalBbsController {
 		model.addAttribute("detail", dao.getDetail(bno));
 		return "detail";
 	}
+	@GetMapping("/delete")
+	public String delete(HttpServletRequest request) {
+		int bno = Integer.parseInt(request.getParameter("bno"));
+		dao.delete(bno);
+		return "redirect:list";
+	}
 }

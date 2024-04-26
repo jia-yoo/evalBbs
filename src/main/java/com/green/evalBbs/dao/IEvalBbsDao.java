@@ -13,5 +13,6 @@ public interface IEvalBbsDao {
 	public List<EvalBbsDto> getList();
 	public void insert(@Param("evalBbsDto") EvalBbsDto evalBbsDto);
 	public EvalBbsDto getDetail(int bno);
+	public void delete(int bno);
 
 }
