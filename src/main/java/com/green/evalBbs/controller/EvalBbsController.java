@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.green.evalBbs.dao.IEvalBbsDao;
+import com.green.evalBbs.dto.EvalBbsDto;
 
 @Controller
 public class EvalBbsController {
@@ -22,4 +24,14 @@ public class EvalBbsController {
 		
 		return "list";
 	}
+	@GetMapping("/writeForm")
+	public String writeForm() {
+		return "writeForm";
+	}
+	@PostMapping("/writeForm")
+	public String submitForm(EvalBbsDto evalBbsDto) {
+		dao.insert(evalBbsDto);
+		return "redirect:list";
+	}
+	
 }

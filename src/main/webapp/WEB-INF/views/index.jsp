@@ -11,7 +11,7 @@
 </head>
 <body>
   <a href="list">목록보기</a>
-  <a hreg="">글 작성하기</a>
+  <a href="writeForm">글 작성하기</a>
 
 </body>
 </html>

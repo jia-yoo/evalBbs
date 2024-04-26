@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+  <a href="writeForm">글 작성하기</a>
   <table>
     <tr>
       <th>게시물 번호</th>
